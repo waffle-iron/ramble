@@ -10,3 +10,4 @@
 * Profile Page (update name / password, etc...)-- `/user`
 * Random Prompt System
 * Delay Delete / Scheduled Delete
+* Markdown Support
