@@ -1,11 +1,12 @@
 # ramble
 
 # Front End (MVP)
-* Login / Signup
-* View Entries
-* Profile Page
-* Create / Edit / Destroy Entries
+* Login / Signup -- `/signup` & `/signin`
+* View Entries -- `/dashboard`
+* View Single Entry -- `/post/:id`
+* Create / Edit / Destroy Entries -- `/post/:id`
 
 # Front End Stretch
+* Profile Page (update name / password, etc...)-- `/user`
 * Random Prompt System
 * Delay Delete / Scheduled Delete
