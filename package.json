@@ -1,15 +1,15 @@
 {
-  "name": "ng-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ramble-fe",
+  "version": "0.0.1",
+  "description": "Ramble application front end",
   "main": "index.js",
   "scripts": {
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": ["ascasson", "tlwirtz", "FazioD", "moniqueyj"],
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.5.8",
     "autoprefixer": "^6.3.7",
