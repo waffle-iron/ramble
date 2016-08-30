@@ -12,6 +12,7 @@ const angular = require('angular');
 angular.module('ramble', []);
 
 // angular services
+require('./service/auth-service');
 
 // angular controllers
 require('./view/signup');
