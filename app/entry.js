@@ -18,4 +18,4 @@ require('./service/ramble-service');
 // angular controllers
 require('./view/signup');
 require('./view/signin');
-require('./view/home');
+// require('./view/home');

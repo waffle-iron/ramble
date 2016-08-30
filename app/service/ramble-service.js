@@ -3,7 +3,7 @@
 const angular = require('angular');
 const ramble = angular.module('ramble');
 
-ramble.factory('rambleService' ['$log', '$q', '$http', 'authService', rambleService]);
+ramble.factory('rambleService', ['$log', '$q', '$http', 'authService', rambleService]);
 
 function rambleService($log, $q, $http, authService) {
   let service = {};
@@ -11,7 +11,7 @@ function rambleService($log, $q, $http, authService) {
 
   service.fetchEntries = function() {
     if (!token) return $q.reject(new Error('no token -- not authorized'));
-    let url = `${__API_URL__}/api/entry`;
+    let url = `${__API_URL__}/api/entries`;
     let config = {
       headers: {
         'Accept': 'application/json',
@@ -41,15 +41,15 @@ function rambleService($log, $q, $http, authService) {
     };
 
     return $http.post(url, entry, config)
-    .then(res = {
-      $log.info('success -- entries ', res.data)
-      return $q.resolve(res.data)
+    .then(res => {
+      $log.info('success -- entries ', res.data);
+      return $q.resolve(res.data);
     })
     .catch(err => {
-      $log.info('error -- entries ', err)
-      return $q.reject(err)
-    })
+      $log.info('error -- entries ', err);
+      return $q.reject(err);
+    });
   };
 
-  return service
+  return service;
 }
