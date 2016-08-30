@@ -3,7 +3,7 @@
 require('./_signin.scss');
 
 const angular = require('angular');
-const ramble = angular.module(ramble);
+const ramble = angular.module('ramble');
 
 
 ramble.controller('SigninController', ['$log', '$location', 'authService', SigninController]);
