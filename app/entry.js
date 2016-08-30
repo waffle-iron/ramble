@@ -15,6 +15,8 @@ angular.module('ramble', []);
 require('./service/auth-service');
 
 // angular controllers
-require('./view/signup');
-require('./view/signin');
-require('./view/home');
+// require('./view/signup');
+// require('./view/signin');
+// require('./view/home');
+
+require('./view/nav');
