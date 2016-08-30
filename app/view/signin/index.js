@@ -3,10 +3,10 @@
 require('./_signin.scss');
 
 const angular = require('angular');
-const rambleApp = angular.module(rambleApp);
+const ramble = angular.module(ramble);
 
 
-rambleApp.controller('SigninController', ['$log', '$location', 'authService', SigninController]);
+ramble.controller('SigninController', ['$log', '$location', 'authService', SigninController]);
 
 function SigninController($log, $location, authService) {
   $log.debug('init signinCtrl');

@@ -3,9 +3,9 @@
 require('./_signup.scss');
 
 const angular = require('angular');
-const rambleApp = angular.module('rambleApp');
+const ramble = angular.module('ramble');
 
-rambleApp.controller('SignupController', ['$log', '$location', 'authService', SignupController]);
+ramble.controller('SignupController', ['$log', '$location', 'authService', SignupController]);
 
 function SignupController($log, $location, authService) {
   $log.debug('init signupCtrl');
