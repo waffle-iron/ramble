@@ -36,4 +36,27 @@ describe('testing ramble service', () => {
       expect(Array.isArray(res.data)).toBe(true);
     });
   });
+
+  it('should post an entry', () => {
+    const authString = this.authService.getToken();
+    const post = {id: 3, title: 'fake title three', keywords: ['key', 'word', 'three']};
+    const headers = {
+      'Accept':'application/json',
+      'Authorization': `Bearer ${authString}`,
+      'Content-Type':'application/json;charset=utf-8'
+    };
+
+    this.httpBackend.expectPOST(`${rambleTestUrl}/api/entry`, post, headers)
+    .respond(200, [
+      {id: 1, title: 'fake title', keywords: ['key', 'word']},
+      {id: 2, title: 'fake title two', keywords: ['key', 'two']},
+      {id: 3, title: 'fake title three', keywords: ['key', 'word', 'three']}
+    ]);
+
+    this.rambleService.createEntry(post)
+    .then(res => {
+      expect(res.status).toBe(200);
+      expect(Array.isArray(res.data)).toBe(true);
+    });
+  });
 });
