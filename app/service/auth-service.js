@@ -1,7 +1,7 @@
 'use strict';
 
 const angular = require('angular');
-const ramble = angular.modlue('ramble');
+const ramble = angular.module('ramble');
 
 ramble.factory('authService', ['$log', '$q', '$window', '$http', authService]);
 
@@ -34,8 +34,8 @@ function authService($log, $q, $window, $http) {
     let url = `${__API_URL__}/api/signup`;
     let config = {
       headers: {
-        'Content-Type': 'applicatin/json',
-        'Accept': 'applicaiton/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       }
     };
 

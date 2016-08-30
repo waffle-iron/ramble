@@ -9,8 +9,9 @@ const angular = require('angular');
 // const ngRoute = require('angular-route');
 
 // angular modules
-// angular.module('ramble');
+angular.module('ramble', []);
 
 // angular services
+require('./service/auth-service');
 
 // angular controllers
