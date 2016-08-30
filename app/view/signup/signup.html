@@ -1,0 +1,18 @@
+<main class="app-signup">
+  <form novalidate ng-submit="signupCtrl.signup()">
+    <section class="form-group">
+      <label for="email">EMAIL : </label>
+      <input class="form-control" email="email" type="text" ng-model="signupCtrl.user.email">
+    </section>
+    <section class="form-group">
+      <label for"password">PASSWORD : </label>
+      <input class="form-control" name="password" type="password" ng-model="signupCtrl.user.password">
+    </section>
+    <section class="form-group">
+      <label for="confirm">CONFIRM : </label>
+      <input class="form-control" name="confirmPassword" type="password" compare-to="signupCtrl.user.password" ng-model="signupCtrl.user.confirmPassword">
+    <button type="submit" class="btn btn-defualt">
+      Sign Up
+    </button>
+  </form>
+</main>
