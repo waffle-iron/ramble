@@ -13,10 +13,9 @@ angular.module('ramble', []);
 
 // angular services
 require('./service/auth-service');
+require('./service/ramble-service');
 
 // angular controllers
-// require('./view/signup');
-// require('./view/signin');
+require('./view/signup');
+require('./view/signin');
 // require('./view/home');
-
-require('./view/nav');
