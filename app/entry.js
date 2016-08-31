@@ -31,6 +31,9 @@ angular.module('ramble', [ngRoute])
 require('./service/auth-service');
 require('./service/ramble-service');
 
+// angular components
+require('./component/nav');
+
 // angular controllers
 require('./view/signup/signup-controller.js');
 require('./view/signin/signin-controller.js');
