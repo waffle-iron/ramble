@@ -41,6 +41,3 @@ require('./component/create-post');
 // angular controllers
 require('./view/signup/signup-controller.js');
 require('./view/signin/signin-controller.js');
-
-//TODO -- move this controller code into component.
-require('./view/new-post/new-post-controller');
