@@ -9,7 +9,7 @@ function rambleService($log, $q, $http, authService) {
   let service = {};
 
   service.fetchEntries = function() {
-    authService.getToken()
+    return authService.getToken()
     .then(token => {
       let url = `${__API_URL__}/api/entries`;
       let config = {
@@ -32,7 +32,7 @@ function rambleService($log, $q, $http, authService) {
   };
 
   service.createEntry = function(entry) {
-    authService.getToken()
+    return authService.getToken()
     .then(token => {
       let url = `${__API_URL__}/api/entry`;
       let config = {

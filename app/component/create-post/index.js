@@ -11,15 +11,27 @@ ramble.component('rambleCreatePost', {
   controllerAs: 'newPostCtrl'
 });
 
-ramble.controller('NewPostController', ['$log', '$location', 'authService', 'rambleService', NewPostController]);
+ramble.controller('NewPostController', ['$q', '$log', '$location', 'authService', 'rambleService', NewPostController]);
 
-function NewPostController($log, $location, authService, rambleService) {
+function NewPostController($q, $log, $location, authService, rambleService) {
+  this.list = ['me', 'you'];
+
   this.log = function() {
     $log.info('logging something test');
   };
 
   this.createEntry = function() {
     $log.info('creating post', this.post);
-    rambleService.createEntry(this.post);
+    rambleService.createEntry(this.post)
+    .then(entry => $log.info('entry created, what now?', entry))
+    .catch(err => $log.err('no entry created', err));
   };
+
+  //TODO -- this code will be used to get stuff.
+  // this.getEntries = function() {
+  //   rambleService.fetchEntries()
+  //   .then(entries => {
+  //     this.list = entries;
+  //   });
+  // };
 }

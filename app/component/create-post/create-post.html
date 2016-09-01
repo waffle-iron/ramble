@@ -1,4 +1,7 @@
-<form class="create-post" novalidate ng-submit="newPostCtrl.createEntry()" >
+<div ng-init="newPostCtrl.getEntries()">
+  <h1>Lists</h1>
+  <h1 ng-repeat="list in newPostCtrl.list">{{list}}</h1>
+  <form class="create-post" novalidate ng-submit="newPostCtrl.createEntry()" >
   <div class="form-group">
     <label for="post-title">TITLE:</label>
     <input type="text" name="post-title" value="Title" ng-model="newPostCtrl.post.title">
@@ -10,3 +13,4 @@
 
   <button type="submit">Create Post</button>
 </form>
+</div>
