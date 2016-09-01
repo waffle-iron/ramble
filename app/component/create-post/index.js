@@ -14,7 +14,6 @@ ramble.component('rambleCreatePost', {
 ramble.controller('NewPostController', ['$q', '$log', '$location', 'authService', 'rambleService', NewPostController]);
 
 function NewPostController($q, $log, $location, authService, rambleService) {
-  this.list = ['me', 'you'];
 
   this.log = function() {
     $log.info('logging something test');
@@ -27,7 +26,7 @@ function NewPostController($q, $log, $location, authService, rambleService) {
     .catch(err => $log.err('no entry created', err));
   };
 
-  //TODO -- this code will be used to get stuff.
+  //TODO -- this code will be used to get stuff. Will eventually be removed.
   // this.getEntries = function() {
   //   rambleService.fetchEntries()
   //   .then(entries => {
