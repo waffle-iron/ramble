@@ -1,25 +1,28 @@
-<form class="app-signup" novalidate ng-submit="signupCtrl.signup()">
-  <section class="form-group">
-    <label for="email">EMAIL : </label>
-    <span class="label label-danger" ng-show="submitted && signForm.email.$error.required">Required!</span>
-    <span class="label label-danger" ng-show="submitted && signForm.$error.email">Invalid email!</span>
-    <input class="form-control" email="email" type="text" ng-model="signupCtrl.user.email">
-  </section>
-  <section class="form-group">
-    <label for"password">PASSWORD : </label>
-    <span class="label label-danger" ng-show="submitted && signForm.password.$error.required">Required!</span>
-    <input class="form-control" ng-required ng-minlength="3" name="password" type="password" ng-model="signupCtrl.user.password">
-  </section>
-  <section class="form-group">
-    <label for="confirm">CONFIRM : </label>
-    <input class="form-control" name="confirmPassword" type="password" compare-to="signupCtrl.user.password" ng-model="signupCtrl.user.confirmPassword">
-    <div class="confirmPWMessage" ng-show="signupForm.$error">
-      <span class="confirm-password-message-error" ng-show="signup.confirmPassword.$error.pwmatch">
-       <!-- pwmatch should equal to ctrl.$setValidity('pwmatch',v) in directive) -->
-        Passwords don't match
-      </span>
-    </div>
-  <button type="submit" class="btn btn-defualt">
-    Sign Up
-  </button>
-</form>
+<div class="signup-page">
+  <nav-bar></nav-bar>
+  <form class="app-signup" novalidate ng-submit="signupCtrl.signup()">
+    <section class="form-group">
+      <label for="email">EMAIL : </label>
+      <span class="label label-danger" ng-show="submitted && signForm.email.$error.required">Required!</span>
+      <span class="label label-danger" ng-show="submitted && signForm.$error.email">Invalid email!</span>
+      <input class="form-control" email="email" type="text" ng-model="signupCtrl.user.email">
+    </section>
+    <section class="form-group">
+      <label for"password">PASSWORD : </label>
+      <span class="label label-danger" ng-show="submitted && signForm.password.$error.required">Required!</span>
+      <input class="form-control" ng-required ng-minlength="3" name="password" type="password" ng-model="signupCtrl.user.password">
+    </section>
+    <section class="form-group">
+      <label for="confirm">CONFIRM : </label>
+      <input class="form-control" name="confirmPassword" type="password" compare-to="signupCtrl.user.password" ng-model="signupCtrl.user.confirmPassword">
+      <div class="confirmPWMessage" ng-show="signupForm.$error">
+        <span class="confirm-password-message-error" ng-show="signup.confirmPassword.$error.pwmatch">
+         <!-- pwmatch should equal to ctrl.$setValidity('pwmatch',v) in directive) -->
+          Passwords don't match
+        </span>
+      </div>
+    <button type="submit" class="btn btn-defualt">
+      Sign Up
+    </button>
+  </form>
+</div>
