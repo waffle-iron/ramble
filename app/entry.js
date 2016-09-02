@@ -26,7 +26,9 @@ angular.module('ramble', [ngRoute])
     template: require('./view/new-post/new-post.html')
   })
   .when('/dashboard', {
-    template: require('./view/dashboard/dashboard.html')
+    template: require('./view/dashboard/dashboard.html'),
+    controller: 'DashboardController',
+    controllerAs: 'dashCtrl'
   });
 
 }]);
