@@ -38,6 +38,8 @@ require('./service/ramble-service');
 // angular components
 require('./component/nav');
 require('./component/create-post');
+require('./component/entry-list');
+require('./component/entry-list-item');
 
 // angular controllers
 require('./view/signup/signup-controller.js');
