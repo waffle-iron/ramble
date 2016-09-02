@@ -1,10 +1,11 @@
+<ramble-nav-bar></ramble-nav-bar>
 <div class="signup-page">
   <form class="app-signup" novalidate ng-submit="signupCtrl.signup()">
     <section class="form-group">
       <label for="email">EMAIL : </label>
       <span class="label label-danger" ng-show="submitted && signForm.email.$error.required">Required!</span>
       <span class="label label-danger" ng-show="submitted && signForm.$error.email">Invalid email!</span>
-      <input class="form-control" email="email" type="text" ng-model="signupCtrl.user.email">
+      <input class="form-control" email="email" type="text" ng-model="signupCtrl.user.user">
     </section>
     <section class="form-group">
       <label for"password">PASSWORD : </label>

@@ -11,7 +11,7 @@ function authService($log, $q, $window, $http) {
 
   function _setToken(_token) {
     if (!_token) return $q.reject(new Error('token not found'));
-    $window.localstorage.setItme('token', _token);
+    $window.localStorage.setItem('token', _token);
     token = _token;
     return $q.resolve(token);
   }
