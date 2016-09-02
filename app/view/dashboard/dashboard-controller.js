@@ -26,11 +26,11 @@ function DashboardController($log, $location, rambleService){
   };
 }
 
-// ramble.component('createPostListForm', {
-//   bindings: {
-//     posts:'='
-//   },
-//   template: require('./dashboard.html'),
-//   controller: DashboardController,
-//   controllerAs: 'dashCtrl'
-// });
+ramble.component('createPostListForm', {
+  bindings: {
+    posts:'='
+  },
+  template: require('./dashboard.html'),
+  controller: DashboardController,
+  controllerAs: 'dashCtrl'
+});
