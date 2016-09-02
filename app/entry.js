@@ -26,9 +26,7 @@ angular.module('ramble', [ngRoute])
     template: require('./view/new-post/new-post.html')
   })
   .when('/dashboard', {
-    template: require('./view/dashboard/dashboard.html'),
-    controller: 'DashboardController',
-    controllerAs: 'dashCtrl'
+    template: require('./view/dashboard/dashboard.html')
   });
 
 }]);
@@ -40,8 +38,8 @@ require('./service/ramble-service');
 // angular components
 require('./component/nav');
 require('./component/create-post');
-require('./view/dashboard/dashboard-controller');
-
+require('./component/entry-list');
+require('./component/entry-list-item');
 // angular controllers
 require('./view/signup/signup-controller.js');
 require('./view/signin/signin-controller.js');

@@ -1,9 +1,10 @@
 <ramble-nav-bar></ramble-nav-bar>
-<div class="dashboard-page" ng-init="dashCtrl.getEntries()">
+<div class="dashboard-page">
   <!-- <create-post-list-form></create-post-list-form> -->
-  <post-list ng-repeat="post in dashCtrl.list" list="post">
+  <!-- <post-list ng-repeat="post in dashCtrl.list" list="post">
     {{post}}
     <button>button</button>
   </post-list>
-  <prompt-form></prompt-form>
+  <prompt-form></prompt-form> -->
+  <ramble-entry-list></ramble-entry-list>
 </div>
