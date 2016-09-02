@@ -25,12 +25,4 @@ function NewPostController($q, $log, $location, authService, rambleService) {
     .then(entry => $log.info('entry created, what now?', entry))
     .catch(err => $log.err('no entry created', err));
   };
-
-  //TODO -- this code will be used to get stuff. Will eventually be removed.
-  // this.getEntries = function() {
-  //   rambleService.fetchEntries()
-  //   .then(entries => {
-  //     this.list = entries;
-  //   });
-  // };
 }
