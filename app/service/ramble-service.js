@@ -7,7 +7,7 @@ ramble.factory('rambleService', ['$log', '$q', '$http', 'authService', rambleSer
 
 function rambleService($log, $q, $http, authService) {
   let service = {};
-
+  
   service.fetchEntries = function() {
     return authService.getToken()
     .then(token => {
