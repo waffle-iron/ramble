@@ -8,7 +8,7 @@ ramble.factory('rambleService', ['$log', '$q', '$http', 'authService', rambleSer
 function rambleService($log, $q, $http, authService) {
   let service = {};
   let token = authService.getToken();
-
+  let service.posts =[];
   service.fetchEntries = function() {
     if (!token) return $q.reject(new Error('no token -- not authorized'));
     let url = `${__API_URL__}/api/entries`;
