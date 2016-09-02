@@ -1,9 +1,8 @@
 'use strict';
 
-require('./_signup.scss');
-
 const angular = require('angular');
 const ramble = angular.module('ramble');
+
 
 ramble.controller('SignupController', ['$log', '$location', 'authService', SignupController]);
 
