@@ -21,6 +21,9 @@ angular.module('ramble', [ngRoute])
     template: require('./view/signin/signin.html'),
     controller: 'SigninController',
     controllerAs: 'signinCtrl'
+  })
+  .when('/new/post', {
+    template: require('./view/new-post/new-post.html')
   });
 
   //TODO: add any other dashboard routes
@@ -30,6 +33,10 @@ angular.module('ramble', [ngRoute])
 // angular services
 require('./service/auth-service');
 require('./service/ramble-service');
+
+// angular components
+require('./component/nav');
+require('./component/create-post');
 
 // angular controllers
 require('./view/signup/signup-controller.js');
