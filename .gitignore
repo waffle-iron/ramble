@@ -2,6 +2,8 @@
 build
 env.sh
 
+db
+
 # Created by https://www.gitignore.io/api/node,vim,osx,linux
 
 ### Node ###
