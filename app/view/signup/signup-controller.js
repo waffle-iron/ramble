@@ -11,7 +11,12 @@ function SignupController($log, $location, authService) {
 
   this.signup = function() {
     $log.debug('init signupCtrl');
-    authService.signup(this.user)
+    console.log("THIS.USER", this.user);
+    var data = {
+      username: this.user.user,
+      password: this.user.password
+    }
+    authService.signup(data)
     .then( token => {
       $log.info('token', token);
     })

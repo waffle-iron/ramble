@@ -24,9 +24,10 @@ angular.module('ramble', [ngRoute])
   })
   .when('/new/post', {
     template: require('./view/new-post/new-post.html')
+  })
+  .when('/dashboard', {
+    template: require('./view/dashboard/dashboard.html')
   });
-
-  //TODO: add any other dashboard routes
 
 }]);
 
