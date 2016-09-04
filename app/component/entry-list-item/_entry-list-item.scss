@@ -1,0 +1,22 @@
+@import "_theme";
+
+.entry-list-item {
+  margin: 10px;
+  padding: 10px;
+  border: thin solid $app-purple;
+  border-radius: 5px;
+
+  h1 {
+    text-transform: capitalize;
+    font-weight: 200;
+  }
+
+  a {
+    text-decoration: none;
+    color: $app-grey;
+
+    &:hover {
+      color: $app-purple;
+    }
+  }
+}
