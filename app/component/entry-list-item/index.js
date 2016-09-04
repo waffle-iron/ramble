@@ -17,6 +17,7 @@ ramble.controller('EntryListItemController', ['rambleService', EntryListItemCont
 
 function EntryListItemController(rambleService) {
   this.bodyPreview = null;
+  this.showMe = true;
 
   if (this.entry.body.length > 75) {
     this.bodyPreview = this.entry.body.slice(0, 74) + '...';
@@ -27,6 +28,7 @@ function EntryListItemController(rambleService) {
   this.deletePost = function() {
     console.log('deleting!');
     rambleService.deleteEntry(this.entry._id)
-    .then(data => console.log('deleted', data));
+    .then(data => this.showMe = false);
+
   };
 }
