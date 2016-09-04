@@ -25,6 +25,23 @@ function rambleService($log, $q, $http, authService) {
     .catch(err => $q.reject(err));
   };
 
+  service.getEntry = function(entryId) {
+    return authService.getToken()
+    .then(token => {
+      let url = `${__API_URL__}/api/entry/${entryId}`;
+      let config = {
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      };
+
+      return $http.get(url, config);
+    })
+    .then(res => $q.resolve(res.data))
+    .catch(err => $q.reject(err));
+  };
+
   service.fetchEntries = function() {
     return authService.getToken()
     .then(token => {
