@@ -6,9 +6,6 @@ const angular = require('angular');
 const ramble = angular.module('ramble');
 
 ramble.component('rambleLrgEntry', {
-  bindings: {
-    'entry':'='
-  },
   template: require('./lrg-entry.html'),
   controller: 'LrgEntryController',
   controllerAs: 'LrgEntryCtrl'
@@ -18,10 +15,11 @@ ramble.controller('LrgEntryController', ['$q', '$log', '$location', '$routeParam
 
 function LrgEntryController($q, $log, $location, $routeParams, rambleService) {
   this.entry = null;
-  this.entryId = $routeParams;
-  this.getEntry = function(entryId) {
-    $log.info('getting entry', entryId);
-    rambleService.getEntry(entryId)
+  this.params = $routeParams;
+
+  this.getEntry = function() {
+    $log.info('the entry id', this.params.id);
+    rambleService.getEntry(this.params.id)
     .then(entry => {
       this.entry = entry;
     })
