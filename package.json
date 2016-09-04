@@ -4,10 +4,14 @@
   "description": "Ramble application front end",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "./node_modules/webpack-dev-server/bin/webwebpack-dev-server.js --inline --hot",
-    "start": "node_modules/webpack/bin/webpack.js",
+    "start:dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "heroku-postbuild": "node_modules/webpack/bin/webpack.js",
+    "start": "node server.js",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.1.0"
   },
   "keywords": [],
   "author": [
