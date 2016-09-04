@@ -1,0 +1,21 @@
+@import "vendor/normalize.css";
+
+body {
+  background-color: #fff;
+}
+
+button {
+  width: 150px;
+  height: 75px;
+  margin: auto;
+
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+input {
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid black;
+}
