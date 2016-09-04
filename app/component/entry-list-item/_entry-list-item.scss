@@ -20,7 +20,7 @@
   }
 
   p {
-    width: 65%;
+    width: 50%;
     color: $app-light-grey
   }
 
@@ -31,5 +31,11 @@
     &:hover {
       color: $app-purple;
     }
+  }
+
+  .fa-trash-o {
+    color: rgba(244, 62, 23, 1);
+    width: 10%;
+    text-align: right;
   }
 }
